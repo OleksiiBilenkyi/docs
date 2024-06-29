@@ -93,11 +93,11 @@ This option will allow you to manage, control, and retrieve information on your 
 | ---------------------- | ------------------------------------------ |
 | `view-account-summary` | View properties for an account             |
 | `import-account`       | Import existing account (a.k.a. "sign in") |
+| `export-account `      | Export existing account                    |
 | `create-account`       | Create a new account                       |
+| `update-social-profile`| Update NEAR Social profile                 |
 | `delete-account`       | Delete an Account                          |
 | `list-keys`            | View a list of keys for an account         |
-| `add-key`              | Add an access key to an account            |
-| `delete-key`           | Delete an access key from an account       |
 
 ### Tokens
 
@@ -112,24 +112,41 @@ This will allow you to manage your token assets such as NEAR, FTs and NFTs
 | `view-ft-balance`   | View the balance of Fungible Tokens                                   |
 | `view-nft-assets`   | View the balance of NFT Tokens                                        |
 
+### Staking
+
+Manage staking: view, add and withdraw stake
+
+| Option              | Description                             |
+| ------------------- | --------------------------------------- |
+| `validator-list`    | View the list of validators to delegate |
+| `delegation`        | Delegation management                   |
+
 ### Contract
 
 This option allows you to manage and interact with your smart contracts
 
-| Option          | Description             |
-| --------------- | ----------------------- |
-| `call-function` | Execute Function        |
-| `deploy`        | Add a new contract code |
-| `download-wasm` | Download Wasm           |
+| Option          | Description                            |
+| --------------- | -------------------------------------- |
+| `call-function` | Execute Function                       |
+| `deploy`        | Add a new contract code                |
+| `inspect`       | Get a list of available function names |
+| `download-abi`  | Download contract ABI                  |
+| `download-wasm` | Download Wasm                          |
+| `view-storage`  | View contract storage state            |
 
 ### Transaction
 
 Operate Transactions
 
-| Option                 | Description                 |
-| ---------------------- | --------------------------- |
-| `view-status`          | View a transaction status   |
-| `construct-tansaction` | Construct a new transaction |
+| Option                    | Description                                                                                                                     |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `view-status`             | View a transaction status                                                                                                       |
+| `reconstruct-transaction` | Use any existing transaction from the chain to construct NEAR CLI command (helpful tool for re-submitting similar transactions) |
+| `construct-transaction`   | Construct a new transaction                                                                                                     |
+| `sign-transaction`        | Sign previously prepared unsigned transaction                                                                                   |
+| `print-transaction`       | Print all fields of previously prepared transaction without modification                                                        |
+| `send-signed-transaction` | Send a signed transaction                                                                                                       |
+| `send-meta-transaction`   | Act as a relayer to send a signed delegate action (meta-transaction)                                                            |
 
 ### Config
 
@@ -142,5 +159,13 @@ This will allow you to change or modify the network connections for your CLI.
 | `show-connections`  | Show a list of network connections |
 | `add-connection`    | Add a network connection           |
 | `delete-connection` | Delete a network Connection        |
+
+### Extension
+
+Manage near CLI and extensions
+
+| Option         | Description          |
+| -------------- | -------------------- |
+| `self-update`  | Self update near CLI |
 
 ---
